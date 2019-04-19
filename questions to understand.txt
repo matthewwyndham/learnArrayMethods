@@ -19,7 +19,4 @@ Questions to understand:
 *
 */
 
-/* 5. Build your real world example.
-*
-*
-*/
+/* 5. Build your real world example. */
