@@ -17,7 +17,6 @@
 "Slice works on strings as well as any other kind of array. You can search through a string until you find a delimiter and then slice there. Like if you are designing a language and want to have a comment character."
 
 /* 5. Build your real world example. */
-
 // this is a line in my markdown syntax
 var myString = "let this->children = 99 # this is a comment after my code"
 // removing the comment
