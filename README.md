@@ -1,3 +1,3 @@
 # learnArrayMethods
 
-Learning how to use differen array methods in javascript
+Learning how to use different array methods in javascript
