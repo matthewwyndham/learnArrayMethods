@@ -13,17 +13,14 @@ myArray.push(6, 7, 8)
 console.log(myArray)
 
 /* 2. Does it edit the current array? */
-
 "Destructive"
 
 /* 3. What does it return? */
-
 "returns the length of the new array"
 
 console.log(myArray.push(9, 10, 11))
 
 /* 4. How can I use this? Come up (not one off the internet) with a small real world example and explain it. */
-
 "if I only want specific values from a database I can have a callback function that collects those values into one array without worrying about position. Instead of iterating I can just keep pushing forever."
 
 /* 5. Build your real world example. */
