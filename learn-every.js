@@ -11,7 +11,7 @@
 "true/false"
 
 /* 4. How can I use this? Come up (not one off the internet) with a small real world example and explain it. */
-
+"check input that it matches any requirements for input. In this case the word must contain an 'a'."
 
 /* 5. Build your real world example. */
 var entries1 = ["alphabet", "anthem", "elephant", "banana", "cream cheese", "headbands"];
