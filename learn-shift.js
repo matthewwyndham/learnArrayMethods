@@ -1,32 +1,23 @@
 // learn shift from mdn 
-/* 1. What does it do? make sure to explain all the parameters. If it has a function as a parameter, make sure to explain all of the parameters for that function.
-*
-* Given an array, shift will remove the first element of the array, return it, and reduce the length of the array.
-*/
+/* 1. What does it do? make sure to explain all the parameters. If it has a function as a parameter, make sure to explain all of the parameters for that function. */
+"Given an array, shift will remove the first element of the array, return it, and reduce the length of the array."
 
-/* 2. Does it edit the current array?
-*
-* Destructive
-*/
+/* 2. Does it edit the current array? */
+"Destructive"
 
-/* 3. What does it return?
-*
-* The first element of the array (or undefined on an empty array)
-*/
+/* 3. What does it return? */
+"The first element of the array (or undefined on an empty array)"
 
-/* 4. How can I use this? Come up (not one off the internet) with a small real world example and explain it.
-*
-* something you can do with .shift() that you can't do with .forEach() is add stuff to your array while you are looping through it.
-*/
+/* 4. How can I use this? Come up (not one off the internet) with a small real world example and explain it. */
+"something you can do with .shift() that you can't do with .forEach() is add stuff to your array while you are looping through it."
 
 /* 5. Build your real world example. */
+var array1 = ["konnichiwa", "world", "I am number 3"]
 
-var sodas = ["konnichiwa", "world", "I am number 3"]
-
-var copyOfSodas = sodas
-while((i = copyOfSodas.shift()) !== undefined) {
+var copyOfarray1 = array1
+while((i = copyOfarray1.shift()) !== undefined) {
     console.log(`value: ${i}`)
-    if (i.length > 1) {copyOfSodas.push(i.slice(0, (i.length - 1)))}
+    if (i.length > 1) {copyOfarray1.push(i.slice(0, (i.length - 1)))}
 }
 
 // this is basically the forEach loop.
