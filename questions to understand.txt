@@ -1,4 +1,4 @@
-// Questions to understand:
+/* Questions to understand: */
 /* 1. What does it do? make sure to explain all the parameters. If it has a function as a parameter, make sure to explain all of the parameters for that function. */
 
 /* 2. Does it edit the current array? */
