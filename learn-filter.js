@@ -17,10 +17,10 @@
 /* 5. Build your real world example. */
 var entries1 = ["alphabet", "anthem", "elephant", "banana", "cream cheese", "headbands"];
 var entries2 = ["lemons", "anthem", "elephnt", "banana", "cream cheese", "hedbands"];
-var entries3 = []
-var entries4 = [4]
-var bwords = ["baba", "bbbb", "bcbc", "bddd", "buiter"]
-var aWords = []
+var entries3 = [];
+var entries4 = [4];
+var bwords = ["baba", "bbbb", "bcbc", "bddd", "buiter"];
+var aWords = [];
 
 
 function containsA (value) {
@@ -31,14 +31,14 @@ function containsA (value) {
     return false;
 }
 
-aWords = entries2.filter(containsA)
-console.log(aWords)
+aWords = entries2.filter(containsA);
+console.log(aWords);
 
-aWords = aWords.concat(entries3.filter(containsA))
-console.log(aWords)
+aWords = aWords.concat(entries3.filter(containsA));
+console.log(aWords);
 
-aWords = aWords.concat(entries4.filter(containsA))
-console.log(aWords)
+aWords = aWords.concat(entries4.filter(containsA));
+console.log(aWords);
 
-aWords = aWords.concat(bwords.filter(containsA))
-console.log(aWords)
+aWords = aWords.concat(bwords.filter(containsA));
+console.log(aWords);

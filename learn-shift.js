@@ -12,12 +12,12 @@
 "something you can do with .shift() that you can't do with .forEach() is add stuff to your array while you are looping through it."
 
 /* 5. Build your real world example. */
-var array1 = ["konnichiwa", "world", "I am number 3"]
+var array1 = ["konnichiwa", "world", "I am number 3"];
 
-var copyOfarray1 = array1
+var copyOfarray1 = array1;
 while((i = copyOfarray1.shift()) !== undefined) {
-    console.log(`value: ${i}`)
-    if (i.length > 1) {copyOfarray1.push(i.slice(0, (i.length - 1)))}
+    console.log(`value: ${i}`);
+    if (i.length > 1) {copyOfarray1.push(i.slice(0, (i.length - 1)));}
 }
 
 // this is basically the forEach loop.

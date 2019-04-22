@@ -14,9 +14,9 @@
 "you can run functions on each member of the array without changing the array."
 
 /* 5. Build your real world example. */
-var a1 = [0, 1, 2, 3, 4, 5]
+var a1 = [0, 1, 2, 3, 4, 5];
 
-a1.forEach(e => console.log(e**e))
+a1.forEach(e => console.log(e**e));
 
-console.log(a1)
+console.log(a1);
 

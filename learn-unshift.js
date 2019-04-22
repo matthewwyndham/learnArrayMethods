@@ -15,13 +15,13 @@
 "If you have two arrays that you want to destructively move things between quickly, you could use a combination of pop and unshift."
 
 /* 5. Build your real world example. */
-var array1 = [1, 2, 3, 4, 5, 6]
-var array2 = [12, 13, 14, 15, 16, 17, 18]
+var array1 = [1, 2, 3, 4, 5, 6];
+var array2 = [12, 13, 14, 15, 16, 17, 18];
 
-console.log(`1: ${array1}\n2: ${array2}`)
+console.log(`1: ${array1}\n2: ${array2}`);
 
-array2.unshift(array1.pop()) // 6 -> array2
-array2.unshift(array1.pop()) // 5 -> array2
-array2.unshift(array1.pop()) // 4 -> array2
+array2.unshift(array1.pop()); // 6 -> array2
+array2.unshift(array1.pop()); // 5 -> array2
+array2.unshift(array1.pop()); // 4 -> array2
 
-console.log(`1: ${array1}\n2: ${array2}`)
+console.log(`1: ${array1}\n2: ${array2}`);

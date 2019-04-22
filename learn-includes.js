@@ -15,9 +15,9 @@
 "this is an easy way to search for something specific in an array. This does not support regular expression, so it's for simple things, but it does handle variables nicely."
 
 /* 5. Build your real world example. */
-var searchArray = [99, 98, 96, 95, 94, 93, 92, 91, 90, 89]
-console.log('93: ' + searchArray.includes(93))
-console.log('97: ' + searchArray.includes(97))
+var searchArray = [99, 98, 96, 95, 94, 93, 92, 91, 90, 89];
+console.log('93: ' + searchArray.includes(93));
+console.log('97: ' + searchArray.includes(97));
 
-var lemon = 96
-console.log('lemon: ' + searchArray.includes(lemon))
+var lemon = 96;
+console.log('lemon: ' + searchArray.includes(lemon));

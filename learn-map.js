@@ -15,12 +15,12 @@
 "if my data is split (in a nice way) between three different arrays (perhaps in an SQL table or something), I can use a map that snatches the index and grab information from other arrays."
 
 /* 5. Build your real world example. */
-var dogs = ["doberman", "dachshund", "french bulldog", "dalmation"]
-var dispositions = ["friendly", "angry", "happy", "protective"]
-var age = [5, 6, 2, 12]
+var dogs = ["doberman", "dachshund", "french bulldog", "dalmation"];
+var dispositions = ["friendly", "angry", "happy", "protective"];
+var age = [5, 6, 2, 12];
 
-var fullDogs = dogs.map((e, i) => [e, dispositions[i], age[i]])
-console.log(fullDogs)
+var fullDogs = dogs.map((e, i) => [e, dispositions[i], age[i]]);
+console.log(fullDogs);
 
 
 // bonus

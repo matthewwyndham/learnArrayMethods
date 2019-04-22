@@ -17,7 +17,7 @@
 "Let's say you have to wrap your important code in some garbage code. An easy way to do this is to have a list of garbage data that you can wrap your important data in. Just use .concat to put the junk string on the front and back!"
 
 /* 5. Build your real world example. */
-var myList1 = ['a', 'b', 'c', 'd', 'e', 'f']
-var myList2 = ['1', '2', '3', '4', '5', '6']
-var newList = myList1.concat(myList2).concat(myList1)
-console.log(newList)
+var myList1 = ['a', 'b', 'c', 'd', 'e', 'f'];
+var myList2 = ['1', '2', '3', '4', '5', '6'];
+var newList = myList1.concat(myList2).concat(myList1);
+console.log(newList);

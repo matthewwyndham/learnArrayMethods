@@ -18,15 +18,15 @@
 
 /* 5. Build your real world example. */
 // this is a line in my markdown syntax
-var myString = "let this->children = 99 # this is a comment after my code"
+var myString = "let this->children = 99 # this is a comment after my code";
 // removing the comment
-var noComments = ""
+var noComments = "";
 
 // this searches through the string and finds any "#" characters, which are my comment delimiter
 for (let i = 0; i < myString.length; ++i) {
     if (myString[i] === "#") {
-        noComments = myString.slice(0, i) // take only everything before a comment
+        noComments = myString.slice(0, i); // take only everything before a comment
     }
 }
 
-console.log(noComments) // >> let this->children = 99 
+console.log(noComments); // >> let this->children = 99 

@@ -14,12 +14,12 @@
 "if you get user input from the command line and then split on spaces you'll still have a newline character at the end. You can remove it with pop"
 
 /* 5. Build your real world example. */
-var userInput = "I love to have lemons \n"
-console.log(userInput)
+var userInput = "I love to have lemons \n";
+console.log(userInput);
 
-var splitOnSpace = userInput.split(" ")
-console.log(splitOnSpace)
+var splitOnSpace = userInput.split(" ");
+console.log(splitOnSpace);
 
-var splitInput = splitOnSpace.pop()
-console.log(splitOnSpace)
-console.log(splitInput)
+var splitInput = splitOnSpace.pop();
+console.log(splitOnSpace);
+console.log(splitInput);

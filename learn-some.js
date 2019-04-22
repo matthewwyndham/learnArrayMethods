@@ -17,8 +17,8 @@
 /* 5. Build your real world example. */
 var entries1 = ["alphabet", "anthem", "elephant", "banana", "cream cheese", "headbands"];
 var entries2 = ["lemons", "anthem", "elephnt", "bnn", "crem cheese", "hedbands"];
-var entries3 = []
-var entries4 = [4]
+var entries3 = [];
+var entries4 = [4];
 
 function containsA (value) {
     for(let i = 0; i < value.length; ++i) {
