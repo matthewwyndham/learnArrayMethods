@@ -19,9 +19,16 @@ const { PerformanceObserver, performance } = require('perf_hooks');
 
 // see https://stackoverflow.com/a/23326623
 
-"after testing though, it appears the fill function actually takes much longer."
+"after testing this seems to be true especially for large arrays. If you want to clear an array, use array.fill(0)."
 
 /* 5. Build your real world example. */
+
+// DO NOT REMOVE THIS LINE
+// This fixes a bug where the first time you call performance.now() it has to
+// take time to set things up. This made the time between t0 and t1 seem really big.
+console.log(performance.now());
+
+// this runs the tests with different size arrays
 testMethods(10);
 testMethods(100);
 testMethods(1000);
@@ -31,13 +38,13 @@ testMethods(100000);
 function testMethods(numberOfItems) {
     var t0, t1, t2, t3, t4, t5, t6, t7; // timers
 
-    var fillarray = Array(numberOfItems).fill(1);
-    var looparray = Array(numberOfItems).fill(1);
-    var anewarray = Array(numberOfItems).fill(1);
-    var newfarray = Array(numberOfItems).fill(1);
-    var mapparray = Array(numberOfItems).fill(1);
-    var shpuarray = Array(numberOfItems).fill(1);
-    var pousarray = Array(numberOfItems).fill(1);
+    var fillarray = Array(numberOfItems).fill(999);
+    var looparray = Array(numberOfItems).fill(999);
+    var anewarray = Array(numberOfItems).fill(999);
+    var newfarray = Array(numberOfItems).fill(999);
+    var mapparray = Array(numberOfItems).fill(999);
+    var shpuarray = Array(numberOfItems).fill(999);
+    var pousarray = Array(numberOfItems).fill(999);
 
     console.log(`array of length ${numberOfItems} (in milliseconds)`);
 
@@ -91,8 +98,8 @@ function testMethods(numberOfItems) {
     }
 
     t7 = performance.now();
-
-    console.log(`>>>
+    
+    console.log(`>>>>--------------
     ${(t1 - t0).toFixed(5)} : fill
     ${(t2 - t1).toFixed(5)} : for-loop
     ${(t3 - t2).toFixed(5)} : constructor & push loop
@@ -100,5 +107,7 @@ function testMethods(numberOfItems) {
     ${(t5 - t4).toFixed(5)} : map
     ${(t6 - t5).toFixed(5)} : shift and push
     ${(t7 - t6).toFixed(5)} : pop and unshift
-    `);
+`);
 }
+
+// so it seems that using fill is the fastest in almost every situation.
