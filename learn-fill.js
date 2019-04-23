@@ -23,10 +23,8 @@ const { PerformanceObserver, performance } = require('perf_hooks');
 
 /* 5. Build your real world example. */
 
-// DO NOT REMOVE THIS LINE
-// This fixes a bug where the first time you call performance.now() it has to
-// take time to set things up. This made the time between t0 and t1 seem really big.
-console.log(performance.now());
+// total test time
+t00 = performance.now();
 
 // this runs the tests with different size arrays
 testMethods(10);
@@ -34,6 +32,10 @@ testMethods(100);
 testMethods(1000);
 testMethods(10000);
 testMethods(100000);
+
+t01 = performance.now();
+
+console.log(`Total runtime: ${((t01 - t00) / 1000).toFixed(2)} seconds`);
 
 function testMethods(numberOfItems) {
     var t0, t1, t2, t3, t4, t5, t6, t7; // timers
@@ -46,7 +48,7 @@ function testMethods(numberOfItems) {
     var shpuarray = Array(numberOfItems).fill(999);
     var pousarray = Array(numberOfItems).fill(999);
 
-    console.log(`array of length ${numberOfItems} (in milliseconds)`);
+    console.log(`array of length ${numberOfItems}`);
 
     t0 = performance.now();
 
@@ -78,7 +80,7 @@ function testMethods(numberOfItems) {
 
     // map
     mapparray = mapparray.map(x => 0)
-
+    
     t5 = performance.now();
 
     // shift and push
@@ -99,15 +101,14 @@ function testMethods(numberOfItems) {
 
     t7 = performance.now();
     
-    console.log(`>>>>--------------
+    console.log(`>>>>-------------- 
     ${(t1 - t0).toFixed(5)} : fill
     ${(t2 - t1).toFixed(5)} : for-loop
     ${(t3 - t2).toFixed(5)} : constructor & push loop
     ${(t4 - t3).toFixed(5)} : constructor & fill
     ${(t5 - t4).toFixed(5)} : map
     ${(t6 - t5).toFixed(5)} : shift and push
-    ${(t7 - t6).toFixed(5)} : pop and unshift
-`);
+    ${(t7 - t6).toFixed(5)} : pop and unshift\n`);
 }
 
 // so it seems that using fill is the fastest in almost every situation.
