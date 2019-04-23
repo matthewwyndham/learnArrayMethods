@@ -5,8 +5,11 @@
 const { PerformanceObserver, performance } = require('perf_hooks');
 
 /* Questions to understand: */
-/* 1. What does it do? make sure to explain all the parameters. If it has a function as a parameter, make sure to explain all of the parameters for that function. */
-"fill() takes a value to fill the array with, and a start and end position. These positions can be negative and it will count from the end of the array instead of the beginning. This cannot exceed the original length of the array."
+/* 1. What does it do? make sure to explain all the parameters. If it has a function as a parameter, 
+      make sure to explain all of the parameters for that function. */
+"fill() takes a value to fill the array with, and a start and end position. These positions" 
+"can be negative and it will count from the end of the array instead of the beginning." 
+"This cannot exceed the original length of the array."
 
 /* 2. Does it edit the current array? */
 "destructive (mutable)"
@@ -14,12 +17,17 @@ const { PerformanceObserver, performance } = require('perf_hooks');
 /* 3. What does it return? */
 "returns the filled array, which is also the original array"
 
-/* 4. How can I use this? Come up (not one off the internet) with a small real world example and explain it. */
-"I couldn't find a useful application of this function except for when you specifically want to fill an array with a specific number. Even then, being able to specify a start and end position seems unnecessary, but it is a good self-describing function. The only benefit is that it's faster than creating a new array."
+/* 4. How can I use this? Come up (not one off the internet) with a small real world example and 
+      explain it. */
+"I couldn't find a useful application of this function except for when you specifically want to" 
+"fill an array with a specific number. Even then, being able to specify a start and end position" 
+"seems unnecessary, but it is a good self-describing function. The only benefit is that it's" 
+"faster than creating a new array."
 
 // see https://stackoverflow.com/a/23326623
 
-"after testing this seems to be true especially for large arrays. If you want to clear an array, use array.fill(0)."
+"after testing this seems to be true especially for large arrays. If you want to clear an array," 
+"use array.fill(0)."
 
 /* 5. Build your real world example. */
 
