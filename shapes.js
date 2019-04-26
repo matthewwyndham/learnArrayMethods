@@ -1,4 +1,4 @@
-// Polyfill for flat (if you run this in Node or in VSCode 'Code Runner')
+// Polyfill for flat (for running this in Node or in VSCode 'Code Runner')
 if (!Array.prototype.flat) {
     Array.prototype.flat = function() {
       var depth = arguments[0];
@@ -76,4 +76,3 @@ console.log(carAfter);
 var personAfter = convert2object(personBefore);
 personAfter["kids"] = "gazillions";
 console.log(personAfter);
-
