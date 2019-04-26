@@ -1,28 +1,3 @@
-// Polyfill for flat (for running this in Node or in VSCode 'Code Runner')
-if (!Array.prototype.flat) {
-    Array.prototype.flat = function() {
-      var depth = arguments[0];
-      depth = depth === undefined ? 1 : Math.floor(depth);
-      if (depth < 1) return Array.prototype.slice.call(this);
-      return (function flat(arr, depth) {
-        var len = arr.length >>> 0;
-        var flattened = [];
-        var i = 0;
-        while (i < len) {
-          if (i in arr) {
-            var el = arr[i];
-            if (Array.isArray(el) && depth > 0)
-              flattened = flattened.concat(flat(el, depth - 1));
-            else flattened.push(el);
-          }
-          i++;
-        }
-        return flattened;
-      })(this, depth);
-    };
-  }
-// end of Polyfill
-
 // object number one
 const carBefore = [
     { key: "year",  value: "2016"     },
@@ -66,13 +41,26 @@ function convert2object (inputArray) {
     return ob;
 }
 
+// same as convert2object, but functional. Uses "reduce".
+function fconvert2object (inputArray) {
+  return inputArray.reduce((ob, e) => {
+    if (typeof ob[e.key] !== 'undefined') { // something is already there! (an array or a value)
+      if (!Array.isArray(ob[e.key])) ob[e.key] = Array(ob[e.key]); // make it an array once
+      ob[e.key] = ob[e.key].concat(e.value); // just keep adding values
+    }
+    else { // nothing is in that spot yet
+      ob[e.key] = e.value;
+    }
+    return ob; // pass the results on
+  }, new Object());
+}
 
 // car shape to new shape without price
-var carAfter = convert2object(carBefore);
+var carAfter = fconvert2object(carBefore);
 delete carAfter.msrp;
 console.log(carAfter);
 
 // person shape to new shape with an added property
-var personAfter = convert2object(personBefore);
+var personAfter = fconvert2object(personBefore);
 personAfter["kids"] = "gazillions";
 console.log(personAfter);
